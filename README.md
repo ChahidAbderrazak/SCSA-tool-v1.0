@@ -6,6 +6,9 @@ abderrazak.chahid@gmail.com
 © EMANG  KAUST 2015      
 
 ## How to run
+run GUI_SCSA.m using matlab
+
+## How to process a signal
 To run the code, please follow this steps:
 
 1- Choose you signal and its propertires 
