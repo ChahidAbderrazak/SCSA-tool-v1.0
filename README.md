@@ -14,7 +14,7 @@ To run the code, please follow this steps:
 
 3- Choose the runing mode :
 * Manual mode, Choose the  SCSA parameters h, Fs 
-* Auto-1 or Auto-2 mode, please go directly to step 4
+* Automatic please go directly to step 4
        
 4-   Click Signal reconstruction button
 
