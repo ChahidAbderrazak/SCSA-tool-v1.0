@@ -7,7 +7,5 @@
 *.xlsx
 *.zip
 *.raw
-/Audio/*
-/ECG_Data/*
-/Pressure_Data/*
-Functions/SCSA_Denoising_scanning.asv
+*.asv
+Functionsm
