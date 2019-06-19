@@ -1,5 +1,5 @@
-# SCSA-tool-v1.0
-
+# SCSA v1.0
+Is a signal reconstruction tool based on Semi-Classical Signla Analysis(SCSA)
 By : chahid abderrazak PhD Student        
 abderrazak.chahid@gmail.com
 
