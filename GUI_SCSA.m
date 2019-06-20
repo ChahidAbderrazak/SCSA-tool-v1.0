@@ -23,7 +23,7 @@ function varargout = GUI_SCSA(varargin)
 
 % Edit the above text to modify the response to help GUI_SCSA
 
-% Last Modified by GUIDE v2.5 20-Jun-2019 11:43:35
+% Last Modified by GUIDE v2.5 20-Jun-2019 11:55:50
 
 % Begin initialization code - DO NOT EDIT
 gui_Singleton = 1;
@@ -160,7 +160,7 @@ end
 %                 xlim([0 10])
 %                 ylabel('Signal')
                 grid on                
-                title([ ' h = ' num2str(h),' , f_s = ' num2str(fs_op),'  ERR_{Rlative}=' ,num2str(RLERR),'  PSNR=' ,num2str(PSNR), '    MSE = ', num2str(MSE),'   N= ', num2str(SCSA_Dw_fs),' samples'])
+                title( 'Signal reconstruction using SCSA')
 %                 xlabel([ ' alpha = ', num2str(-alp)])%,' betha = ', num2str(betha),' A1 = ', num2str(A1)])
                 xL = xlim;yL = ylim;
                 if SCSA_slice>1
@@ -171,6 +171,11 @@ end
                     end
                 end
 %% Play the output sound
+set(handles.N_a1,'string', SCSA_Dw_fs );
+set(handles.MSE_a1,'string', MSE );
+
+set(handles.MSE_a1,'string', sprintf('%.1e',MSE) );
+
 
 % sound(sig_orgin,Fs_audio);                     % original
 % audiowrite('sig_orgin.wav',sig_orgin,Fs_audio)
@@ -195,13 +200,13 @@ close(figure(100))
 % end
 
 %% save the output SCSA signal
-
-sv_sig=get(handles.save_sig_reuse,'Value');
-
-if sv_sig == 1
- save('scsa_data.mat','yscsa3','One_Sec_rate','gen_data','Totale_time')
-end 
-set(handles.save_sig_reuse,'Value',0)
+% 
+% sv_sig=get(handles.save_sig_reuse,'Value');
+% 
+% if sv_sig == 1
+%  save('scsa_data.mat','yscsa3','One_Sec_rate','gen_data','Totale_time')
+% end 
+% set(handles.save_sig_reuse,'Value',0)
 set(handles.up_plot,'string',' Signal reconstruction ') ;
 
 
@@ -372,7 +377,7 @@ function acdmc_sig_Callback(hObject, eventdata, handles)
         msg_sig='Signal = A1*t^2 + A2*t^2';
             
     case 5      
-        msg_sig='Signal = A1*Exp(alpha*t)u + A2*Exp(beta*t)u';
+        msg_sig='Signal = A1*Exp(alpha*t) + A2*Exp(beta*t)';
         
  
     case 6
@@ -393,7 +398,7 @@ function acdmc_sig_Callback(hObject, eventdata, handles)
         msg_sig='num of the signal does mnot exist, PLZ choose an other one';
  end  
  
-set(handles.sig_func,'string',msg_sig) ;
+% set(handles.listbox2,'string',msg_sig) ;
 
 
         if sig_num==9
@@ -1370,3 +1375,49 @@ set(handles.H_paramtr,'Enable', 'off');
 set(handles.uipanel1,'Visible', 'off'); 
 set(handles.uipanel2,'Visible', 'off'); 
 set(handles.uipanel3,'Visible', 'off'); 
+
+
+
+function N_a1_Callback(hObject, eventdata, handles)
+% hObject    handle to N_a1 (see GCBO)
+% eventdata  reserved - to be defined in a future version of MATLAB
+% handles    structure with handles and user data (see GUIDATA)
+
+% Hints: get(hObject,'String') returns contents of N_a1 as text
+%        str2double(get(hObject,'String')) returns contents of N_a1 as a double
+
+
+% --- Executes during object creation, after setting all properties.
+function N_a1_CreateFcn(hObject, eventdata, handles)
+% hObject    handle to N_a1 (see GCBO)
+% eventdata  reserved - to be defined in a future version of MATLAB
+% handles    empty - handles not created until after all CreateFcns called
+
+% Hint: edit controls usually have a white background on Windows.
+%       See ISPC and COMPUTER.
+if ispc && isequal(get(hObject,'BackgroundColor'), get(0,'defaultUicontrolBackgroundColor'))
+    set(hObject,'BackgroundColor','white');
+end
+
+
+
+function MSE_a1_Callback(hObject, eventdata, handles)
+% hObject    handle to MSE_a1 (see GCBO)
+% eventdata  reserved - to be defined in a future version of MATLAB
+% handles    structure with handles and user data (see GUIDATA)
+
+% Hints: get(hObject,'String') returns contents of MSE_a1 as text
+%        str2double(get(hObject,'String')) returns contents of MSE_a1 as a double
+
+
+% --- Executes during object creation, after setting all properties.
+function MSE_a1_CreateFcn(hObject, eventdata, handles)
+% hObject    handle to MSE_a1 (see GCBO)
+% eventdata  reserved - to be defined in a future version of MATLAB
+% handles    empty - handles not created until after all CreateFcns called
+
+% Hint: edit controls usually have a white background on Windows.
+%       See ISPC and COMPUTER.
+if ispc && isequal(get(hObject,'BackgroundColor'), get(0,'defaultUicontrolBackgroundColor'))
+    set(hObject,'BackgroundColor','white');
+end
