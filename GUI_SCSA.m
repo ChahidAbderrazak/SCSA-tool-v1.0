@@ -23,7 +23,7 @@ function varargout = GUI_SCSA(varargin)
 
 % Edit the above text to modify the response to help GUI_SCSA
 
-% Last Modified by GUIDE v2.5 19-Jun-2019 15:11:47
+% Last Modified by GUIDE v2.5 20-Jun-2019 11:43:35
 
 % Begin initialization code - DO NOT EDIT
 gui_Singleton = 1;
@@ -46,6 +46,8 @@ end
 
 % --- Executes just before GUI_SCSA is made visible.
 addpath ./Functions
+addpath ./Functionsm
+
 % addpath G:\My Drive\MyCodes\GitHub\InProcess_Projects\SCSA_Rec_Denoising_Scripts\Function\SCSA_main_functions
 % addpath G:\My Drive\MyCodes\GitHub\InProcess_Projects\SCSA_Rec_Denoising_Scripts\Function\SCSA_main_functions\Denoising
 
@@ -119,21 +121,9 @@ RLERR=(norm(yscsa3,1)-norm(gen_data,1))/norm(gen_data,1);
 
 %% History of h values
 
-if automtc==1
    set(handles.psnr_a1,'string',num2str(floor(PSNR))) ;
    set(handles.h_a1,'string',num2str(floor(h))) ;
    set(handles.Nh_a1,'string',num2str(floor(Nh))) ;
-
-elseif opt_search == 0
-        set(handles.psnr_m,'string',num2str(floor(PSNR))) ;
-        set(handles.h_m,'string',num2str(floor(h))) ;
-        set(handles.Nh_m,'string',num2str(floor(Nh))) ;
-
-        else
-            set(handles.psnr_a2,'string',num2str(floor(PSNR))) ;
-            set(handles.h22,'string',num2str(floor(h))) ;
-            set(handles.Nh_a2,'string',num2str(floor(Nh))) ;
-end
 
 %% plot SCSA reconsrtucted signal results
 axes(handles.axes3);
@@ -760,17 +750,17 @@ end
 
 
 function psnr_m_Callback(hObject, eventdata, handles)
-% hObject    handle to psnr_m (see GCBO)
+% hObject    handle to psnr_a1 (see GCBO)
 % eventdata  reserved - to be defined in a future version of MATLAB
 % handles    structure with handles and user data (see GUIDATA)
 
-% Hints: get(hObject,'String') returns contents of psnr_m as text
-%        str2double(get(hObject,'String')) returns contents of psnr_m as a double
+% Hints: get(hObject,'String') returns contents of psnr_a1 as text
+%        str2double(get(hObject,'String')) returns contents of psnr_a1 as a double
 
 
 % --- Executes during object creation, after setting all properties.
 function psnr_m_CreateFcn(hObject, eventdata, handles)
-% hObject    handle to psnr_m (see GCBO)
+% hObject    handle to psnr_a1 (see GCBO)
 % eventdata  reserved - to be defined in a future version of MATLAB
 % handles    empty - handles not created until after all CreateFcns called
 
@@ -852,17 +842,17 @@ end
 
 
 function Nh_m_Callback(hObject, eventdata, handles)
-% hObject    handle to Nh_m (see GCBO)
+% hObject    handle to Nh_a1 (see GCBO)
 % eventdata  reserved - to be defined in a future version of MATLAB
 % handles    structure with handles and user data (see GUIDATA)
 
-% Hints: get(hObject,'String') returns contents of Nh_m as text
-%        str2double(get(hObject,'String')) returns contents of Nh_m as a double
+% Hints: get(hObject,'String') returns contents of Nh_a1 as text
+%        str2double(get(hObject,'String')) returns contents of Nh_a1 as a double
 
 
 % --- Executes during object creation, after setting all properties.
 function Nh_m_CreateFcn(hObject, eventdata, handles)
-% hObject    handle to Nh_m (see GCBO)
+% hObject    handle to Nh_a1 (see GCBO)
 % eventdata  reserved - to be defined in a future version of MATLAB
 % handles    empty - handles not created until after all CreateFcns called
 
