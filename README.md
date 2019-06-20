@@ -2,9 +2,16 @@
 
 ![SCSAv1](https://user-images.githubusercontent.com/32301374/59841527-25fba080-935d-11e9-83f1-7440a71f0339.png)
 
-Is a signal reconstruction tool based on Semi-Classical Signla Analysis(SCSA)
-By : chahid abderrazak PhD Student        
-abderrazak.chahid@gmail.com
+Is a signal reconstruction tool based on Semi-Classical Signal Analysis (SCSA) method.
+
+By : chahid abderrazak PhD Student        abderrazak.chahid@gmail.com
+
+PhD adviser: Prof. Taous-Meriem Laleg-Kirati     taousmeriem.laleg@kaust.edu.sa 
+
+Estimation, Modeling and ANalysis group     https://emang.kaust.edu.sa
+
+King Abdullah University of Science and Technology (KAUST)
+  www.kaust.edu.sa
 
 © EMANG  KAUST 2015      
 
