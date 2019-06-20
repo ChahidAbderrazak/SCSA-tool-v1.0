@@ -1365,7 +1365,9 @@ function man_h_Callback(hObject, eventdata, handles)
 
 % Hint: get(hObject,'Value') returns toggle state of man_h
 set(handles.H_paramtr,'Enable', 'on'); 
-
+set(handles.uipanel1,'Visible', 'on'); 
+set(handles.uipanel2,'Visible', 'on'); 
+set(handles.uipanel3,'Visible', 'on'); 
 
 % --- Executes on button press in auto_h.
 function auto_h_Callback(hObject, eventdata, handles)
@@ -1375,3 +1377,6 @@ function auto_h_Callback(hObject, eventdata, handles)
 
 % Hint: get(hObject,'Value') returns toggle state of auto_h
 set(handles.H_paramtr,'Enable', 'off'); 
+set(handles.uipanel1,'Visible', 'off'); 
+set(handles.uipanel2,'Visible', 'off'); 
+set(handles.uipanel3,'Visible', 'off'); 
