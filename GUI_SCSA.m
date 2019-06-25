@@ -155,7 +155,7 @@ end
                 
                 
                 
-                set(lgdd,'FontSize',15); 
+                set(lgdd,'FontSize',12); 
                 xlabel('Temps (s)')
 %                 xlim([0 10])
 %                 ylabel('Signal')
