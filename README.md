@@ -4,9 +4,9 @@
 
 Is a signal reconstruction tool based on Semi-Classical Signal Analysis (SCSA) method.
 
-By : chahid abderrazak PhD Student        abderrazak.chahid@gmail.com
+By : chahid abderrazak,  PhD Student,         email:abderrazak.chahid@gmail.com
 
-PhD adviser: Prof. Taous-Meriem Laleg-Kirati     taousmeriem.laleg@kaust.edu.sa 
+PhD adviser: Prof. Taous-Meriem Laleg-Kirati, Associate Professor (KAUST),      email:taousmeriem.laleg@kaust.edu.sa 
 
 Estimation, Modeling and ANalysis group     https://emang.kaust.edu.sa
 
