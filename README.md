@@ -1,6 +1,6 @@
 
 
-![SCSAv1](https://user-images.githubusercontent.com/32301374/59841527-25fba080-935d-11e9-83f1-7440a71f0339.png)
+![SCSAv1_a](https://user-images.githubusercontent.com/32301374/60066290-4fc31780-970f-11e9-8476-e1369ccffa9a.png)
 
 Is a signal reconstruction tool based on Semi-Classical Signal Analysis (SCSA) method.
 
